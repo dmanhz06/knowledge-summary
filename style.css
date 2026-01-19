@@ -1,0 +1,181 @@
+[href="tieudelon"] {
+    color: blue;
+    text-align: center;
+}
+body{
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+.tieudenho{
+    color: red;
+    font-size: 22px;
+}
+.ds li{
+    color: green;
+}
+.ds li:hover{
+    color: blue;
+    font-size: 1.2rem;
+}
+#hint {
+    font-size: 18px;
+    color: orange;
+}
+p:target{
+    background-color: yellow;
+    color: blue;
+}
+
+.boxcangiua{
+    
+    background-color: orange;
+    width: 10em;
+    height: 5em;
+    border: 5px solid rgba(40, 11, 11, 0.862); /* red green blue alpha */
+    text-align: center;
+    line-height: 450%;
+    border-width: 20px;
+    border-radius: 30px ;
+    font-size: 20px;
+}
+.language-cpp {
+    width: 100%;     
+    display: block;
+    overflow-x: auto;
+    padding: 1em;
+    background: #2d2d2d;
+}
+.decor{
+    width: 200px;
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: overline underline wavy blue;
+}
+.img1{
+    border: 10px solid red;
+    border-radius: 30px;
+}
+.img1:hover{
+    border: 10px solid blue;
+    border-radius: 30px;
+    width: 260px;
+    height: 310px;
+    transition: width 0.5s, height 0.5s; /* Hiệu ứng chuyển đổi mượt mà */
+}
+
+.box{
+    width: 400px;
+    height: 200px;
+    border: 5px solid black;
+    border-radius: 10px;
+    overflow: auto;
+    background-color: gainsboro;   
+    overscroll-behavior: contain;
+    text-align : justify;
+}
+/* width */
+.box::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+.box::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.box::-webkit-scrollbar-thumb {
+  background: red; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.box::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.box_overflow{
+    background-color: aqua;   
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;   /*đã được prefix qua web prefixer*/
+}
+.link_icon{
+    text-decoration: none;
+    color: black;
+}
+.iconf li{
+    margin-bottom: 5px;
+    list-style-type: none;   /* xóa bullet point */
+}
+body {
+    height: 100vh;
+    background-image: url("./bgi2.jpg");
+    background-repeat: repeat;
+}
+
+.link_id:visited{
+    color: purple;
+}
+a:link{
+    color: darkblue;
+}
+a:hover{
+    color: orange;
+    font-size: 1.1rem;
+}
+a:active{
+    color: red;
+}   
+/* Image grid styles */
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px); /* 3 cột, mỗi cột rộng 100px */
+  grid-template-rows: repeat(3, 100px); /* 3 hàng, mỗi hàng cao 100px */
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-image: url("./babydog.jpg");
+  background-size: 300% 300%; /* tổng kích thước ảnh */
+  background-repeat: no-repeat;
+  border: 1px solid black;
+}
+.cell:hover {
+    transform: scale(1.2); /* Phóng to ô khi hover */
+    transition: transform 0.3s; /* Hiệu ứng chuyển đổi mượt mà */
+}
+
+/* hàng 1 *//*chỉ cần cho chạy từ min -> max x với y = 0% (hàng đầu) */
+.cell:nth-child(1) { background-position:   0%   0%; } /*chỉ cần cho chạy từ min -> max x với y = 0% (hàng đầu) */
+.cell:nth-child(2) { background-position:  50%   0%; }
+.cell:nth-child(3) { background-position: 100%   0%; }
+
+/* hàng 2 *//*chỉ cần cho chạy từ min -> max x với y = 50% (hàng giữa) */
+.cell:nth-child(4) { background-position:   0%  50%; } /*chỉ cần cho chạy từ min -> max x với y = 50% (hàng giữa) */
+.cell:nth-child(5) { background-position:  50%  50%; }
+.cell:nth-child(6) { background-position: 100%  50%; }
+
+/* hàng 3 *//*chỉ cần cho chạy từ min -> max x với y = 100% (hàng cuối) */
+.cell:nth-child(7) { background-position:   0% 100%; } /*chỉ cần cho chạy từ min -> max x với y = 100% (hàng cuối) */
+.cell:nth-child(8) { background-position:  50% 100%; }
+.cell:nth-child(9) { background-position: 100% 100%; }
+
+
+/* End Image grid styles */

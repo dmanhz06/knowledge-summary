@@ -1,14 +1,31 @@
 [href="tieudelon"] {
-    color: blue;
+    color:#0dc3b6d2;  /*đây là phần backup khi trình duyệt không hỗ trợ*/
+    font-size: 2rem;
     text-align: center;
 }
+/*kiểm tra trình duyệt có hỗ trợ background-clip: text hay không*/
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+    [href="tieudelon"] {
+        font-size: 3rem;
+        text-align: center;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(to right, #ff0000 20%, #f6750c, #0eb40e, #00ffff, #0000ff, #ff00ff, #ff0000);
+    }
+}
+
 body{
     font-family: Arial, sans-serif;
     font-size: 16px;
 }
 .tieudenho{
-    color: red;
+    color: transparent;
     font-size: 22px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, #ee7a07, #01f7e7);
+
 }
 .ds li{
     color: green;
@@ -28,22 +45,37 @@ p:target{
 
 .boxcangiua{
     
-    background-color: orange;
+    background-color: transparent;
+    background-image: linear-gradient(to left, rgb(255, 98, 0), rgb(37, 200, 209));
     width: 10em;
     height: 5em;
-    border: 5px solid rgba(40, 11, 11, 0.862); /* red green blue alpha */
+    /* border: 5px solid rgba(40, 11, 11, 0.862); red green blue alpha */
+    border: 5px solid transparent;
+    border-image: linear-gradient(to right, red, rgb(0, 8, 255)) 1;
     text-align: center;
     line-height: 450%;
     border-width: 20px;
-    border-radius: 30px ;
     font-size: 20px;
 }
+.boxcangiua:hover{
+    background-color: transparent;
+    background-image: linear-gradient(to left, rgb(255, 0, 238), rgb(0, 255, 213));
+    border: 5px solid transparent;
+    border-image: linear-gradient(to right, rgb(0, 0, 255), rgb(255, 0, 0)) 1;
+    width: 10em;
+    height: 5em;
+    text-align: center;
+    line-height: 450%;
+    border-width: 20px;
+    font-size: 22px;
+    transition: all 0.3s ease;
+}
 .language-cpp {
-    width: 100%;     
+    width: 600px;     
+    text-align: center;
     display: block;
     overflow-x: auto;
     padding: 1em;
-    background: #2d2d2d;
 }
 .decor{
     width: 200px;
@@ -51,8 +83,6 @@ p:target{
     text-align: center;
     text-decoration: overline underline wavy blue;
 }
-
-
 
 .box{
     width: 400px;
@@ -96,7 +126,8 @@ p:target{
 */
 
 .box_overflow{
-    background-color: aqua;   
+    background-color: transparent;
+    background-image: linear-gradient(to right, rgb(0, 255, 166), rgb(0, 60, 255));   
     overflow: hidden;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -124,7 +155,10 @@ body {
     color: purple;
 }
 a:link{
-    color: darkblue;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, #030bff, #847bfe);
 }
 a:hover{
     color: orange;
@@ -147,7 +181,8 @@ a:active{
   background-image: url("./babydog.jpg");
   background-size: 300% 300%; /* tổng kích thước ảnh */
   background-repeat: no-repeat;
-  border: 1px solid black;
+  border: 1px solid transparent;
+  border-image: linear-gradient(to right, rgb(112, 81, 81), rgb(0, 106, 255)) 1;
 }
 .cell:hover {
     transform: scale(1.2); /* Phóng to ô khi hover */
@@ -198,20 +233,23 @@ a:active{
  
 /* Handle */
 .box_anh_cuon::-webkit-scrollbar-thumb {
-  background: rgb(255, 0, 0); 
+  background: transparent;
+  background-image: linear-gradient(to bottom, red, blue); 
   border-radius: 10px;
 }
 
 /* Handle on hover */
 .box_anh_cuon::-webkit-scrollbar-thumb:hover {
-  background: #0ad2e8; 
+  background: transparent;
+  background-image: linear-gradient(to bottom, blue, red); 
 }
 
 .box_anh_dong{
     height: 400px;
-    width: 400px;
+    width: 400px;   
+    margin : 0 auto;
     overflow: auto;
-    background-position: 50% 0;
+    /* background-position: 50% 0; */
     border-radius: 10px;
     border: 5px solid transparent;
     border-image: linear-gradient(to right, red, rgb(151, 7, 241)) 1;
@@ -219,7 +257,7 @@ a:active{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-position: center;
+    background-position: center 50%;
     
 }
 
@@ -247,4 +285,60 @@ a:active{
   transition: transform 0.5s;
   transform: rotate(4deg);
   
+}
+/* End Border gradient image styles */
+.boxlon{
+    width: 95%;
+    height: 200px;
+    margin: 0 auto;
+    border: 3px solid black;
+    background-image: url(./bgngang.jpg);
+    background: cover/no-repeat;
+    position: relative;
+}
+.avatar {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  clip-path: circle();
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.avatar.left {
+  left: 20px;
+}
+
+.avatar.right {
+  right: 20px;
+}
+.avatar:hover {
+  scale: 1.2;
+  transition: all 0.3s ease;
+}
+.glass {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  /* giới hạn giữa 2 avatar */
+  left: 130px;   /* 20 + 80 + 20 */
+  right: 130px;  /* 20 + 80 + 20 */
+
+  height: 80px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  z-index: 1;
+}
+.text {
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }

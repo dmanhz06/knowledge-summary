@@ -51,27 +51,19 @@ p:target{
     text-align: center;
     text-decoration: overline underline wavy blue;
 }
-.img1{
-    border: 10px solid red;
-    border-radius: 30px;
-}
-.img1:hover{
-    border: 10px solid blue;
-    border-radius: 30px;
-    width: 260px;
-    height: 310px;
-    transition: width 0.5s, height 0.5s; /* Hiệu ứng chuyển đổi mượt mà */
-}
+
+
 
 .box{
     width: 400px;
     height: 200px;
-    border: 5px solid black;
     border-radius: 10px;
     overflow: auto;
     background-color: gainsboro;   
     overscroll-behavior: contain;
     text-align : justify;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to right, red, rgb(214, 241, 7)) 1;
 }
 /* width */
 .box::-webkit-scrollbar {
@@ -179,3 +171,79 @@ a:active{
 
 
 /* End Image grid styles */
+.box_anh_cuon{
+    color: grey;
+    height: 400px;
+    width: 80%;
+    overflow: auto;
+    background-image: url("./chung2.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    background-attachment: local;
+    border-radius: 10px;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to right, red, rgb(7, 198, 241)) 1;
+
+}
+.box_anh_cuon::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+.box_anh_cuon::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.box_anh_cuon::-webkit-scrollbar-thumb {
+  background: rgb(255, 0, 0); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.box_anh_cuon::-webkit-scrollbar-thumb:hover {
+  background: #0ad2e8; 
+}
+
+.box_anh_dong{
+    height: 400px;
+    width: 80%;
+    overflow: auto;
+    background-position: 50% 0;
+    border-radius: 10px;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to right, red, rgb(151, 7, 241)) 1;
+    background-image: url("./meme-con-khi-1.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+/* Border gradient image styles */
+.img1 {
+  width: 240px;
+  height: 290px;
+  border-radius: 30px;
+  border: 10px solid transparent;
+  background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(to right, red, yellow) border-box;
+  transition: all 0.5s ease;
+  
+}
+
+.img1:hover {
+  width: 260px;
+  height: 310px;
+  border: 10px solid transparent;
+  background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(to bottom, yellow, red) border-box;
+  transition: all 0.5s ease;
+  transition: transform 0.5s;
+  transform: rotate(4deg);
+  
+}

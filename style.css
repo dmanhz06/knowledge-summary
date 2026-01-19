@@ -174,7 +174,7 @@ a:active{
 .box_anh_cuon{
     color: grey;
     height: 400px;
-    width: 100%;
+    width: 400px;
     overflow: auto;
     background-image: url("./chung2.jpg");
     background-repeat: no-repeat;
@@ -209,7 +209,7 @@ a:active{
 
 .box_anh_dong{
     height: 400px;
-    width: 100%;
+    width: 400px;
     overflow: auto;
     background-position: 50% 0;
     border-radius: 10px;
@@ -219,6 +219,7 @@ a:active{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    background-position: center;
     
 }
 

@@ -18,8 +18,10 @@ body{
         color: transparent;
         background-clip: text;
         -webkit-background-clip: text;
-        background-image: linear-gradient(to right, #ff0000 20%, #f6750c, #0eb40e, #00ffff, #0000ff, #ff00ff, #ff0000);
+        background-image: linear-gradient(to right, #dd71a0, #94BBE9 80%);
+        /* background-image: linear-gradient(to right, #ff0000 20%, #f6750c, #0eb40e, #00ffff, #0000ff, #ff00ff, #ff0000); */
     }
+
 }
 
 body{
@@ -101,6 +103,23 @@ p:target{
     text-align : justify;
     border: 5px solid transparent;
     border-image: linear-gradient(to right, red, rgb(214, 241, 7)) 1;
+}
+.box:hover{
+    border: 5px solid transparent;
+    /* box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); */
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.3);
+    border-image: linear-gradient(to right, rgb(7, 241, 151), rgb(7, 198, 241)) 1;
+    transition: all 0.3s ease;
+}
+.box::first-line{
+    font-size: 1.0rem;
+    color: blue;
+    font-weight: bold;
+}
+.box::first-letter{
+    font-size: 2rem;
+    color: red;
+    font-weight: bold;
 }
 /* width */
 .box::-webkit-scrollbar {
@@ -228,6 +247,28 @@ a:active{
     border-image: linear-gradient(to right, red, rgb(7, 198, 241)) 1;
 
 }
+.box_anh_cuon:hover{
+    border: 5px solid transparent;
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.3);
+    border-image: linear-gradient(to right, rgb(0, 255, 213), rgb(0, 60, 255)) 1;
+    transition: all 0.3s ease;
+}
+.box_anh_cuon::first-line{
+    font-size: 1.0rem;
+    color: rgb(92, 92, 253);
+    font-weight: bold;
+}
+.box_anh_cuon::first-letter{
+    font-size: 2rem;
+    color: red;
+    font-weight: bold;
+}
+.overflow::after{
+    display: block;
+    content : "test thêm content bằng pseudo element after";
+    color: #000;
+}
+
 .box_anh_cuon::-webkit-scrollbar {
   width: 20px;
 }
@@ -267,44 +308,14 @@ a:active{
     background-position: center 50%;
     
 }
-
-/* Border gradient image styles */
-.img1 {
-  width: 240px;
-  height: 290px;  
-  border-radius: 30px;
-  border: 10px solid transparent;
-  background:
-    linear-gradient(white, white) padding-box,
-    linear-gradient(to right, red, yellow) border-box;
-  transition: all 0.5s ease;
-  
+.box_anh_dong:hover{
+    border: 5px solid transparent;
+    box-shadow: 20px 15px 20px rgba(0, 0, 0, 0.3);
+    /* scale: 1.2; */
+    border-image: linear-gradient(to right, rgb(7, 241, 151), rgb(7, 198, 241)) 1;
+    transition: all 0.3s ease;
 }
 
-.img1:hover {
-  width: 260px;
-  height: 310px;
-  border: 10px solid transparent;
-  background:
-    linear-gradient(white, white) padding-box,
-    linear-gradient(to bottom, yellow, red) border-box;
-  transition: all 0.5s ease;
-  transition: transform 0.5s;
-  transform: rotate(4deg);
-  
-}
-
-.img2{
-  pointer-events: none;
-  width: 240px;
-  height: 290px;
-  border-radius: 30px;
-  border: 10px solid transparent;
-  background:
-    linear-gradient(white, white) padding-box,
-    linear-gradient(to bottom, red, yellow) border-box;
-}
-/* End Border gradient image styles */
 .boxlon{
     width: 600px;
     height: 200px;
@@ -376,4 +387,102 @@ a:active{
     box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.5);
     scale: 1.1;
     transition: all 0.3s ease;
+}
+/* End Border gradient image styles */
+
+
+/* tạo giá trị biến (css variable) để tránh lặp */
+:root{
+    --img-width : 240px;
+    --img-height : 290px;
+    --box-shadow-1 : 15px 15px 30px rgba(0, 0, 0, 0.3);
+    --img-background : linear-gradient(to right, red, yellow);
+
+}
+/* Border gradient image styles */
+.img1 {
+  width : var (--img-width);  /* width: 240px; */
+  height : var (--img-height); /* height: 290px; */
+  border-radius: 30px;
+  border: 10px solid transparent;
+  background:
+    linear-gradient(white, white) padding-box,
+    /* linear-gradient(to right, red, yellow) border-box; */
+  transition: all 0.5s ease;
+  
+}
+
+.img1:hover {
+  width: 260px;
+  height: 310px;
+  border: 10px solid transparent;
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.3);
+  background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(to bottom, yellow, red) border-box;
+  transition: all 0.5s ease;
+  transition: transform 0.5s;
+  transform: rotate(4deg);
+  
+}
+
+.img2{
+  pointer-events: none;
+  width: 240px;
+  height: 290px;
+  border-radius: 30px;
+  border: 10px solid transparent;
+  background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(to bottom, red, yellow) border-box;
+}
+/* End Border gradient image styles */
+.cua_img2::before{
+    display: block;
+    color : black;
+    content : "* vì 2 ảnh sử dụng kích thước và màu giống nhau nên sẽ dùng biến để đỡ phải lặp giá trị"
+}
+
+/* design code section */
+.section{
+    max-width: 90%;
+    height: auto;
+    border : 5px solid black;
+    counter-reset : section;
+    padding-left: 30px;
+}
+.section:hover{
+    border : 5px solid transparent;
+    border-image: linear-gradient(to right, black, rgb(7, 198, 241)) 1;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;  
+}
+.section::before{
+    content : "*This is a section block : tự động tạo section* "; /*chèn nội dung trước thẻ div.section*/
+    display : block;
+    font-size : 1.2rem;
+    color : purple;
+    font-weight: bold;
+    margin-bottom : 10px;
+}
+.section::first-line{
+
+    color: red;
+    font-weight: bold;
+}
+h2{
+    counter-increment : section;   /*tăng bộ đếm lên 1 mỗi khi gặp thẻ h2*/
+    counter-reset : subsection; /*khởi tạo lại bộ đếm con về 0 mỗi khi gặp thẻ h2*/
+}
+h2::before{
+    content : "Phần " counter(section) ": "; /*chèn nội dung trước thẻ h2*/
+    color : blue;
+    font-weight: bold;
+}
+h3{
+    counter-increment : subsection; /*tăng bộ đếm con lên 1 mỗi khi gặp thẻ h3*/
+}
+h3::before{
+    content : counter(section) "." counter(subsection) ". "; /*chèn nội dung trước thẻ h3*/
+    color : green;
 }

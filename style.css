@@ -585,6 +585,8 @@ a:active{
     left : 0;
     right : 0;
     z-index: 99;
+    display : flex;
+    justify-content: space-around;
 }
 .nav a{
     text-decoration: none;
@@ -600,4 +602,63 @@ a:active{
 }
 h1{
     margin-top: 61px;
+}
+
+/* các dạng display : flex --- justify-content (theo chiều ngang) đặt ở box cha */
+.container{
+    display: flex;
+    margin-left : -15px;
+    font-size: 1.5rem;
+    background-color: rgb(255, 21, 21);
+    justify-content: flex-start;   /* bắt đầu từ trái sang phải */
+    justify-content: flex-end;     /* bắt đầu từ phải sang trái */
+    justify-content: center;       /* căn ở giữa center */
+    justify-content: space-between;/* cách đều nhau - sát lề */
+    justify-content: space-around; /* khoảng trắng xung quanh mỗi phần tử là bằng nhau (gấp đôi khoảng cách lề) - trừ lề */
+    justify-content: space-evenly; /* các phần tử cách đều nhau - kể cả lề */
+    /* test ở đây : */
+    /* justify-content: start; */
+}
+
+.block{
+    background-color:rgb(0, 170, 255) ;
+}
+
+/* các dạng display : flex ---align-items (theo chiều dọc) */
+.container_doc{
+    display: flex;
+    height: 200px;
+    margin-left: -15px;
+    font-size: 1.5rem;
+    background-color: red;
+    justify-content: space-evenly;
+    /* muốn test thì dùng ctrl + / từng dòng để test chạy demo thử */
+
+    /* mặc định - các phần tử tự co dãn theo cái box cha */
+    /* align-items: stretch;    */
+    /* các phần tử nằm trên cùng theo chiều dọc (từ trên xuống dưới) - top */
+    /* align-items : flex-start; */
+    /* các phần tử đều nằm dưới cùng theo chiều dọc - bottom  */
+    /* align-items: flex-end; */
+    /* các phần tử đều nằm lơ lửng chính giữa theo chiều dọc  */
+    align-items: center;
+    /* các phần tử nằm cao theo cái phần chân của chữ trong box */
+    /* align-items: baseline; */
+
+}
+.block_doc{
+    background-color: rgb(1, 254, 98);
+}
+.box_doc1{
+    height: 100px;
+    font-size: 2rem;
+    /* mẹo căn giữa chữ trong box */
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.suyra{
+    color: blue;
+    font-size: 1.2rem;
 }

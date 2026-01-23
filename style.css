@@ -10,7 +10,6 @@ body{
 /*kiểm tra trình duyệt có hỗ trợ background-clip: text hay không*/
 @supports (background-clip: text) or (-webkit-background-clip: text) {
     [href="tieudelon"] {
-       width: 600px;
        max-width: 100%;
        height: auto;
        text-align: center;
@@ -94,11 +93,11 @@ p:target{
 }
 
 .box{
-    width: 400px;
-    height: 200px;
+    width: 430px;
+    height: 530px;
     border-radius: 10px;
     overflow: auto;
-    background-color: gainsboro;   
+    background-color: rgb(195, 198, 201);   
     overscroll-behavior: contain;
     text-align : justify;
     border: 5px solid transparent;
@@ -111,15 +110,23 @@ p:target{
     border-image: linear-gradient(to right, rgb(7, 241, 151), rgb(7, 198, 241)) 1;
     transition: all 0.3s ease;
 }
-.box::first-line{
-    font-size: 1.0rem;
-    color: blue;
-    font-weight: bold;
+.box h1{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 2.2rem;
+    background-clip: text;
+    color : transparent;
+    background-image: linear-gradient(to right, red, blue);
 }
-.box::first-letter{
-    font-size: 2rem;
-    color: red;
-    font-weight: bold;
+/* sử dụng position : sticky*/
+.box h2{
+    background-color: yellow;
+    padding: 2px;
+    top : 0;
+    position : sticky;
+}
+.box li{
+    margin-bottom: 5px;
 }
 /* width */
 .box::-webkit-scrollbar {
@@ -317,8 +324,9 @@ a:active{
 }
 
 .boxlon{
-    width: 600px;
-    height: 200px;
+    left : 0;
+    right : 0;
+    height: 160px;
     margin: 0 auto;
     border: 3px solid black;
     background-image: url(./bgngang.jpg);
@@ -354,19 +362,19 @@ a:active{
   left: 130px;   /* 20 + 80 + 20 */
   right: 130px;  /* 20 + 80 + 20 */
 
-  height: 80px;
+  height: 70px;
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 
   display: flex;
-  align-items: center;
+  align-items: center;    /*căn giữa box*/
   justify-content: center;
   border-radius: 20px;
   z-index: 1;
 }
 .text {
-  font-size: 28px;
+  font-size: 20px;
   font-weight: bold;
   color: black;
   text-shadow: 0 2px 6px rgba(0,0,0,0.3);
@@ -460,7 +468,7 @@ a:active{
 .section::before{
     content : "*This is a section block : tự động tạo section* "; /*chèn nội dung trước thẻ div.section*/
     display : block;
-    font-size : 1.2rem;
+    font-size : 1.1rem;
     color : purple;
     font-weight: bold;
     margin-bottom : 10px;
@@ -470,19 +478,20 @@ a:active{
     color: red;
     font-weight: bold;
 }
-h2{
+
+.section h2{
     counter-increment : section;   /*tăng bộ đếm lên 1 mỗi khi gặp thẻ h2*/
     counter-reset : subsection; /*khởi tạo lại bộ đếm con về 0 mỗi khi gặp thẻ h2*/
 }
-h2::before{
+.section h2::before{
     content : "Phần " counter(section) ": "; /*chèn nội dung trước thẻ h2*/
     color : blue;
     font-weight: bold;
 }
-h3{
+.section h3{
     counter-increment : subsection; /*tăng bộ đếm con lên 1 mỗi khi gặp thẻ h3*/
 }
-h3::before{
+.section h3::before{
     content : counter(section) "." counter(subsection) ". "; /*chèn nội dung trước thẻ h3*/
     color : green;
 }
@@ -586,6 +595,7 @@ h3::before{
     text-align: left;
     display : inline-block;
     padding : 5px;
+    padding-left: 20px;
 
 }
 h1{

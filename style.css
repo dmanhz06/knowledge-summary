@@ -79,7 +79,7 @@ p:target{
     transition: all 0.3s ease;
 }
 .language-cpp {
-    width: 600px;     
+    width: 520px;     
     text-align: center;
     display: block;
     overflow-x: auto;
@@ -603,7 +603,8 @@ a:active{
 h1{
     margin-top: 61px;
 }
-
+/* FLEX BOX */
+/* phần 1 */
 /* các dạng display : flex --- justify-content (theo chiều ngang) đặt ở box cha */
 .container{
     display: flex;
@@ -618,12 +619,17 @@ h1{
     justify-content: space-evenly; /* các phần tử cách đều nhau - kể cả lề */
     /* test ở đây : */
     /* justify-content: start; */
+    
 }
 
 .block{
     background-color:rgb(0, 170, 255) ;
 }
+.block:hover{
+    scale : 1.2;
+}
 
+/* phần 2 */
 /* các dạng display : flex ---align-items (theo chiều dọc) */
 .container_doc{
     display: flex;
@@ -649,6 +655,9 @@ h1{
 .block_doc{
     background-color: rgb(1, 254, 98);
 }
+.block_doc:hover{
+    scale : 1.2;
+}
 .box_doc1{
     height: 100px;
     font-size: 2rem;
@@ -661,4 +670,90 @@ h1{
 .suyra{
     color: blue;
     font-size: 1.2rem;
+}
+.boxh2 h2{
+    margin : auto;
+    font-size: 2rem;
+    color : white;
+}
+.boxh2{
+    text-align: center;
+    margin: auto;
+    background-color: transparent;
+    background-image: linear-gradient(to right, rgb(0, 195, 255), blue);
+    width: 200px;
+    margin-top: 15px;
+    border-radius: 20px;
+}
+.boxh2 :hover{
+    border-radius: 20px;
+    scale : 1.1;
+    background-color: transparent;
+    background-image: linear-gradient(to right, rgb(0, 26, 255), rgb(0, 162, 255));
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+
+}
+.flexh{
+    color : black;
+    counter-increment: section_flex;
+    margin-top: 15px;
+}
+.flexh::before{
+    content : "Phần "counter(section_flex) ": ";
+    color : red;
+    font-weight: bold;
+}
+.section h2{
+    counter-increment : section;   /*tăng bộ đếm lên 1 mỗi khi gặp thẻ h2*/
+    counter-reset : subsection; /*khởi tạo lại bộ đếm con về 0 mỗi khi gặp thẻ h2*/
+}
+.section h2::before{
+    content : "Phần " counter(section) ": "; /*chèn nội dung trước thẻ h2*/
+    color : blue;
+    font-weight: bold;
+}
+/*phần 3 : align-self là các thuộc tính con tự cài đặt vị trí cho riêng mình*/
+.container1{
+    display: flex;
+    height: 200px;
+    margin-left: -15px;
+    font-size: 1.5rem;
+    background-color: red;
+    justify-content: center;
+    align-items: start;
+}
+.block1{
+    background-color: blueviolet;
+}
+.block1:hover{
+    scale : 1.2;
+}
+.box12{
+    align-self: flex-end;
+}
+.box14{
+    align-self: center;
+}
+/* phần 4 : flex-grow : chia tỉ lệ chiếm theo trọng số */
+.container2{
+    display: flex;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: -15px;
+    font-size: 1.5rem;
+    /* background-color: red; */
+    justify-content: center;
+    align-items: stretch;
+}
+.block2{
+    background-color: rgb(0, 255, 213);
+    border: 1.2px solid black;
+}
+.box21,
+.box23{
+    flex-grow: 2;
+}
+.box25{
+    flex-grow: 2;
 }

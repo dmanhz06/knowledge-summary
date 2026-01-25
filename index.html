@@ -50,7 +50,7 @@
                 <a href="#Home">Icon</a>
             </li>
             <li>
-                <a href="#id_hieu_ung">Hiệu ứng</a>
+                <a href="#id_flexbox">Flex box</a>
             </li>
             <li>
                 <a href="#id_scroll">Thanh cuộn</a>
@@ -63,6 +63,9 @@
             </li>
         </ul>
      </div>
+    <div class="boxh2">
+        <h2>ICON</h2>
+    </div>
     <p class="tieudenho" >test link icon</p>
     <ul class="iconf">
         <li><i class="fa-solid fa-house" ></i><a class="link_icon" href="#Home">Home</a></li>
@@ -72,7 +75,7 @@
         <li ><i class="fa-brands fa-twitter" style="color : #0085eb"></i><a class="link_icon" href="https://www.twitter.com/" target="__blank">Twitter</a></li>
     </ul>
     <hr>
-    <p class="tieudenho">test icon hộp thư 9+</p>
+    <p class="tieudenho" id="id_flexbox">test icon hộp thư 9+</p>
     <div class="thongbao">
         
         <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">
@@ -95,8 +98,12 @@
 - space-between : các đều nhau sát lề
 - space-around : khoảng trắng xung quanh mỗi phần tử là bằng nhau
 - space-evenly : cách đều nhau và cách cả lề    -->
+    <div class="boxh2">
+        <h2>flex box</h2>
+    </div>
+    
 
-    <p class="tieudenho">test các dạng flexbox - justify-content theo chiều ngang</p>
+    <p class="tieudenho flexh">test các dạng flexbox - justify-content theo chiều ngang</p>
     <div class="container">
         <div class="block box1">Block 1</div>
         <div class="block box2">Block 2</div>
@@ -105,7 +112,7 @@
         <div class="block box5">Block 5</div>
     </div>
 
-    <p class="tieudenho">test các dạng flexbox - align-items theo chiều dọc</p>
+    <p class="tieudenho flexh">test các dạng flexbox - align-items theo chiều dọc</p>
     <div class="container_doc">
         <div class="block_doc box_doc1">Block 1</div>
         <div class="block_doc box_doc2">Block 2</div>
@@ -113,6 +120,25 @@
         <div class="block_doc box_doc4">Block 4</div>
         <div class="block_doc box_doc5">Block 5</div>
     </div>
+
+    <p class="tieudenho flexh">align-self : flex-start/ flex-end/ center/ baseline/ stretch : khi muốn 1 item align theo cách riêng</p>
+    <div class="container1">
+        <div class="block1 box11">Block 1</div>
+        <div class="block1 box12">Block 2</div>
+        <div class="block1 box13">Block 3</div>
+        <div class="block1 box14">Block 4</div>
+        <div class="block1 box15">Block 5</div>
+    </div>
+
+    <div class="tieudenho flexh">flex-grow : chia tỉ lệ box con chiếm theo trọng số</div>
+    <div class="container2">
+        <div class="block2 box21">Block 1</div>
+        <div class="block2 box22">Block 2</div>
+        <div class="block2 box23">Block 3</div>
+        <div class="block2 box24">Block 4</div>
+        <div class="block2 box25">Block 5</div>
+    </div>
+
     <p class="suyra">**có thể luyện tập flexbox thông qua game sau : **</p>
     <i class="fa-solid fa-frog" style="color: #1aac12;"></i><a href="https://game.tuhoc.cc/3/#vi">Game flex box</a><i class="fa-solid fa-frog" style="color: #1aac12;"></i>
     <p class="tieudenho">test go to 1 specific path in page:</p>

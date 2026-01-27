@@ -88,7 +88,7 @@ p:target{
     transition: all 0.3s ease;
 }
 .language-cpp {
-    width: 520px;     
+    width: 90%;     
     text-align: center;
     display: block;
     overflow-x: auto;
@@ -596,18 +596,26 @@ a:active{
     z-index: 99;
     display : flex;
     justify-content: space-around;
+
 }
 .nav a{
     text-decoration: none;
     color : white;
 }
 
-.nav li{
-    text-align: left;
+.block_a{
+    text-align: center;
     display : inline-block;
-    padding : 5px;
-    padding-left: 20px;
-
+    padding : 15px;
+}
+.block_a:hover{
+    scale : 1.2;
+    color : red;
+}
+.nav a:hover{
+    color : transparent;
+    background-clip: text;
+    background-image: linear-gradient(to right, rgb(255, 4, 4), rgb(72, 0, 255));
 }
 h1{
     margin-top: 61px;
@@ -675,6 +683,19 @@ h1{
     justify-content: center;
     align-items: center;
 }
+.box_doc3{
+    display: flex;
+    align-self: flex-end;
+    height: 90%;
+}
+.box_doc4{
+    align-self: flex-end;
+    height: 50%;
+}
+.box_doc5{
+    align-self: flex-end;
+    height: 20%;
+}
 
 .suyra{
     color: blue;
@@ -732,7 +753,7 @@ h1{
     margin-left: -15px;
     font-size: 1.5rem;
     background-color: red;
-    justify-content: center;
+    justify-content: space-around;
     align-items: start;
 }
 .block1{
@@ -802,7 +823,7 @@ h1{
     margin: auto;
     background-color: transparent;
     background-image: linear-gradient(to right, rgb(0, 204, 255), rgb(255, 94, 0));
-    width: 400px;
+    width: 90%;
     margin-top: 15px;
     border-radius: 20px;
     margin-top: 25px;
@@ -820,7 +841,114 @@ h1{
     background-image: linear-gradient(to right,rgb(255, 94, 0), rgb(0, 204, 255));
     box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
-
 }
 
-/* Phần 6 : flex-basis : là set main size item ( theo trục main axis ) */
+/* Phần 6 : flex-wrap : là xét xem thuộc tính các box con có được xuống hàng hay ko  */
+/* flex-wrap : wrap (xuống hàng) - no-wrap (ko xuống hàng) - wrap-reverse (xuống hàng đảo ngược) */
+/* flex-direction : row-reverse : thuộc tính đảo ngược chiều main axis */
+.container4{
+    display: flex;
+    min-height: 200px;
+    margin-top: 10px;
+    margin-left: -15px;
+    font-size: 1.5rem;
+    background-color: red;
+    align-content: stretch;    /* có thể thay đổi tùy ý thuộc tính align-content */
+    flex-wrap: nowrap;    /* ko xuống dòng - thuộc tính default*/
+    flex-wrap: wrap;   /* xuống dòng */
+    flex-wrap: wrap-reverse;   /* xuống dòng đảo ngược */
+    /* test here :  */
+    /* flex-wrap: wrap; */
+    flex-direction: row-reverse;    /* thuộc tính đảo ngược chiều main axis */
+}
+.block4{
+    /* width: 30%; */
+    flex-basis: 30%;
+    background-color: blue;
+    border : 1.5px solid black;
+}
+.block4:hover{
+    scale : 1.1;
+}
+.flexh p,
+.note p{
+    display: inline;
+    background-color: yellow;
+}
+.note{
+    border : 5px solid rgb(0, 145, 255);
+    padding : 5px;
+    margin-top: 10px;
+    background-color: #fff;
+    font-size: 1.2rem;
+    
+}
+/* Phần 7 : flex-direction : column là đảo chiều trục chính của main axis và cros axis theo dạng cột (tất cả các thuộc tính bên trong đều bị ảnh hưởng) */
+.container5{
+    display: flex;
+    min-height: 200px;
+    margin-top: 10px;
+    margin-left: -15px;
+    font-size: 1.5rem;
+    background-color: red;
+    
+    flex-wrap: nowrap;    /* ko xuống dòng - thuộc tính default*/
+    flex-wrap: wrap;  /* xuống dòng*/
+    /* flex-wrap: wrap-reverse;   xuống dòng đảo ngược */
+    /* test here :  */
+    /* flex-wrap: wrap; */
+    flex-direction: column;    /* thuộc tính đảo ngược chiều main axis */
+    align-content: stretch;  /* từ ngang sang dọc (dọc theo chiều main axis hiện tại - ngang) */  /* có thể thay đổi tùy ý thuộc tính align-content */
+    /* khi đổi sang column thì thay vì xài align-content thì ta phải xài justify-content */
+    justify-content: center;   /* từ dọc -> ngang */
+    /* viết tắt : flex-flow : flex-wrap flex-direction */
+    flex-flow : wrap column;
+}
+.block5{
+    /* width: 30%; */
+    background-color: blue;
+    border : 1.5px solid black;
+}
+.block5:hover{
+    scale : 1.1;
+}
+
+.box52{
+    align-self: flex-end;
+    width: 50%;
+    background-color: #fff;
+}
+.box53{
+    align-self: center;
+    width: 50%;
+    background-color: green;
+}
+.box54{
+    align-self: start;
+    width: 50%;
+    background-color: #fff;
+}
+
+
+/* Phần 7 : flex-basis : là set main size item ( theo trục main axis - trục ngang ) */
+.img-note{
+    width: 97%;
+    height: auto;
+    border : 5px solid black;
+    margin-top: 5px;
+}
+
+/* Game flex box */
+.game_flex{
+    display: flex;
+    height: 300px;
+    margin-top: 30px;
+    border : 5px solid black;
+    flex-wrap : wrap;
+}
+.game_flex p{
+    padding : 10px;
+}
+.last{
+    text-align: center;
+}

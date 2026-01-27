@@ -44,25 +44,15 @@
         </a>
      </div>
      <!--test thanh menu bar-->
-     <div class="nav">
-        <ul>
-            <li>
-                <a href="#Home">Icon</a>
-            </li>
-            <li>
-                <a href="#id_flexbox">Flex box</a>
-            </li>
-            <li>
-                <a href="#id_scroll">Thanh cuộn</a>
-            </li>
-            <li>
-                <a href="#id_section">Tiêu đề</a>
-            </li>
-            <li>
-                <a href="#id_link">Design</a>
-            </li>
-        </ul>
-     </div>
+
+    <div class="nav">
+        <div class="block_a headbox1"><a href="#Home">Icon</a></div>
+        <div class="block_a headbox2"><a href="#id_flexbox">Flex box</a></div>
+        <div class="block_a headbox3"><a href="#id_scroll">Scroll Bar</a></div>
+        <div class="block_a headbox4"><a href="#id_section">Title Section</a></div>
+        <div class="block_a headbox5"><a href="#id_link">Design</a></div>
+    </div>
+
     <div class="boxh2">
         <h2>ICON</h2>
     </div>
@@ -102,8 +92,8 @@
         <h2>flex box</h2>
     </div>
     
-
-    <p class="tieudenho flexh">test các dạng flexbox - justify-content theo chiều ngang</p>
+    <!-- ------------------------------------------------------------------------- -->
+    <div class="tieudenho flexh"> <p>justify-content</p> theo <p>chiều ngang</p></div>
     <div class="container">
         <div class="block box1">Block 1</div>
         <div class="block box2">Block 2</div>
@@ -111,8 +101,8 @@
         <div class="block box4">Block 4</div>
         <div class="block box5">Block 5</div>
     </div>
-
-    <p class="tieudenho flexh">test các dạng flexbox - align-items theo chiều dọc</p>
+    <!-- ------------------------------------------------------------------------- -->
+    <div class="tieudenho flexh"> <p>align-items</p> theo <p>chiều dọc</p></div>
     <div class="container_doc">
         <div class="block_doc box_doc1">Block 1</div>
         <div class="block_doc box_doc2">Block 2</div>
@@ -120,8 +110,8 @@
         <div class="block_doc box_doc4">Block 4</div>
         <div class="block_doc box_doc5">Block 5</div>
     </div>
-
-    <p class="tieudenho flexh">align-self : flex-start/ flex-end/ center/ baseline/ stretch : khi muốn 1 item align theo cách riêng</p>
+    <!-- ------------------------------------------------------------------------- -->
+    <div class="tieudenho flexh"> <p>align-self</p> : flex-start/ flex-end/ center/ baseline/ stretch : khi muốn 1 box con có item align theo <p>cách riêng</p></div>
     <div class="container1">
         <div class="block1 box11">Block 1</div>
         <div class="block1 box12">Block 2</div>
@@ -129,8 +119,8 @@
         <div class="block1 box14">Block 4</div>
         <div class="block1 box15">Block 5</div>
     </div>
-
-    <div class="tieudenho flexh">flex-grow : chia tỉ lệ box con chiếm theo trọng số</div>
+    <!-- ------------------------------------------------------------------------- -->
+    <div class="tieudenho flexh"> <p>flex-grow</p> : chia tỉ lệ box con chiếm theo trọng số</div>
     <div class="container2">
         <div class="block2 box21">Block 1</div>
         <div class="block2 box22">Block 2</div>
@@ -138,8 +128,8 @@
         <div class="block2 box24">Block 4</div>
         <div class="block2 box25">Block 5</div>
     </div>
-
-    <div class="tieudenho flexh shrink">flex-shrink : là xác định khả năng co lại của items </div>
+    <!-- ------------------------------------------------------------------------- -->
+    <div class="tieudenho flexh shrink"> <p>flex-shrink</p> : là xác định khả năng co lại của items </div>
     <div class="container3">
         <div class="block3 box31">Block 1</div>
         <div class="block3 box32">Block 2</div>
@@ -148,12 +138,57 @@
         <div class="block3 box35">Block 5</div>
 
     </div>
+    <!-- ------------------------------------------------------------------------- -->
+    <div class="tieudenho flexh"> <p>flex-wrap</p> : xuống hàng - flex-wrap : no-wrap nghĩa là ko cho xuống hàng <br>* <p>flex-direction : row-reverse</p> nghĩa là thuộc tính đảo chiều trục main axis (ngang)</div>
+    <div class="container4">
+        <div class="block4 box41">Block 1</div>
+        <div class="block4 box42">Block 2</div>
+        <div class="block4 box43">Block 3</div>
+        <div class="block4 box44">Block 4</div>
+        <div class="block4 box45">Block 5</div>
+    </div>
+    <!-- ------------------------------------------------------------------------- -->
+    <div class="tieudenho flexh"> <p>flex-direction : column</p> đảo ngược chiều sang dạng cột (column) <br>=> từ main axis ngang -> dọc và cross axis dọc -> ngang => <p>tất cả các thuộc tính khác đều bị ảnh hưởng</p></div>
+    <div class="container5">
+        <div class="block5 box51">Block 1</div>
+        <div class="block5 box52">Block 2</div>
+        <div class="block5 box53">Block 3</div>
+        <div class="block5 box54">Block 4</div>
+        <div class="block5 box55">Block 5</div>
+    </div>
+    <div class="note">
+        =&gt; Cú pháp viết tắt cho 2 thuộc tính flex-wrap và flex-direction là : <br>
+        <p>=&gt; flex-flow : &lt;flex-wrap&gt; &lt;flex-direction&gt;</p>
+    </div>
+    <!-- ------------------------------------------------------------------------- -->
+    <div class="tieudenho flexh"> <p>flex-basis</p> : là set main size item ( theo trục main axis - trục nằm ngang )</div>
+    <img src="./flex-basis1.jpg" alt="flex_basis" class="img-note">
+    <img src="./flex-basis2.jpg" alt="flex_basis" class="img-note">
 
+    <div class="note">
+        =&gt; Cú pháp viết tắt cho 3 thuộc tính flex-grow flex-shrink và flex-basis là : <br>
+        <p>=&gt; flex: &lt;flex-grow&gt; &lt;flex-shrink&gt; &lt;flex-basis&gt;</p>
+    </div>
+    <img src="./flex-viet_tat.jpg" alt="flex_basis" class="img-note">
+    <div class="tieudenho flexh"> <p>order</p> : (default = 0) Thay đổi thứ tự các item (box con) <br> <p>\A là kí tự dùng để xuống dòng</p> trong content (phải có thêm <p>white-space : pre</p>)</div>
+    <img src="./flex-order.jpg" alt="flex_basis" class="img-note">
+    <img src="./content_wrap.jpg" alt="flex_basis" class="img-note">
+    <!-- ------------------------------------------------------------------------- -->
 
     <div class="suyra">
         <p>Game luyện Flex-Box</p>
     </div>
-    <i class="fa-solid fa-frog" style="color: #1aac12;"></i><a href="https://game.tuhoc.cc/3/#vi">Game flex box</a><i class="fa-solid fa-frog" style="color: #1aac12;"></i>
+    <div class="game_flex">
+        <p><i class="fa-solid fa-frog" style="color: #1aac12;"></i><a href="https://game.tuhoc.cc/3/#vi">Game tuhoc.cc</a></p>
+        <p><i class="fa-solid fa-dragon" style="color: #ff0000;"></i><a href="https://mastery.games/flexboxzombies"> Game hiệp sĩ bắn zombie</a></p>
+        <p><i class="fa-solid fa-shield-halved" style="color: #0c3479;"></i><a href="https://knightsoftheflexboxtable.com"> Game đi đến kho báu</a></p>
+        <p><i class="fa-solid fa-gamepad"></i><a href="https://codingfantasy.com/games/flexboxadventure/play"> Game hiệp sĩ ăn táo</a></p>
+        <p><i class="fa-brands fa-fort-awesome" style="color: #811313;"></i><a href="http://www.flexboxdefense.com"> Game thiết kế pháo đài </a><i class="fa-brands fa-fort-awesome" style="color: #811313;"></i></p>
+
+    </div>
+    
+    
+    <!-- ------------------------------------------------------------------------- -->
     <p class="tieudenho">test go to 1 specific path in page:</p>
     <ul class="ds">
         <li><a href="#ulist">test unorderd list</a></li>

@@ -468,11 +468,20 @@ a:active{
     counter-reset : section;
     padding-left: 30px;
 }
+.box_design{
+    margin-top: 50px;
+}
 .section:hover{
     border : 5px solid transparent;
     border-image: linear-gradient(to right, black, rgb(7, 198, 241)) 1;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;  
+}
+.title_sec{
+    margin-top: 50px;
+}
+.box_sec{
+    margin-bottom: 50px;
 }
 .section::before{
     content : "*This is a section block : tự động tạo section* "; /*chèn nội dung trước thẻ div.section*/
